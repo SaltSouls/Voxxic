@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "voxxic:item/charcoal_dust"
+  }
+}

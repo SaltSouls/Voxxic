@@ -20,7 +20,7 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.tainted.voxxic.Voxxic"
+        "value": "com.tainted.voxxic.core.Voxxic"
       }
     ]
   },
