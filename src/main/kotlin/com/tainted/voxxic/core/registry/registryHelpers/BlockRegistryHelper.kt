@@ -7,15 +7,15 @@ import net.minecraft.item.BlockItem
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
-//TODO Improve Block Registry
-class BlockRegistryHelper(private val path: String, blockSettings: FabricBlockSettings, private val itemSettings: FabricItemSettings? = null) : Block(blockSettings) {
+class BlockRegistryHelper(){
 
-    private val block: Block = Block(blockSettings)
-    fun RegisterBlock(): BlockRegistryHelper {
-        Registry.register(Registry.BLOCK, Identifier("voxxic", this.path), this.block)
-        when {
-            itemSettings != null -> Registry.register(Registry.ITEM, Identifier("voxxic", this.path), BlockItem(this.block, itemSettings))
-        }
-        return this;
+    fun <T : Block> registerBlock(id: String, block: T, itemSettings: FabricItemSettings? = null): T {Registry.register(Registry.BLOCK, Identifier("voxxic", id), block);
+        when {itemSettings != null -> Registry.register(Registry.ITEM, Identifier("voxxic", id), BlockItem(block, itemSettings));}
+        return block;
+    }
+    fun registerBlock(id: String, blockSettings: FabricBlockSettings, itemSettings: FabricItemSettings? = null): Block {val block = Block(blockSettings)
+        Registry.register(Registry.BLOCK, Identifier("voxxic", id), block);
+        when {itemSettings != null -> Registry.register(Registry.ITEM, Identifier("voxxic", id), BlockItem(block, itemSettings));}
+        return block;
     }
 }

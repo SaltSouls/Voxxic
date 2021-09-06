@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "voxxic:item/arcane_dust"
+    "layer0": "voxxic:item/brewing_pot"
   }
 }

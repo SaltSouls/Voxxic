@@ -1,5 +1,6 @@
 package com.tainted.voxxic.core.registry
 
+import com.tainted.voxxic.common.items.ArcaneDust
 import com.tainted.voxxic.core.registry.registryHelpers.ItemRegistryHelper
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.ItemGroup
@@ -7,14 +8,15 @@ import net.minecraft.util.Rarity
 
 //TODO Add Items
 class VOXItems {
-    val CHARCOAL_DUST: ItemRegistryHelper = ItemRegistryHelper("charcoal_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val COAL_DUST: ItemRegistryHelper = ItemRegistryHelper("coal_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val IRON_DUST: ItemRegistryHelper = ItemRegistryHelper("iron_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val COPPER_DUST: ItemRegistryHelper = ItemRegistryHelper("copper_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val GOLD_DUST: ItemRegistryHelper = ItemRegistryHelper("gold_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val LAPIS_DUST: ItemRegistryHelper = ItemRegistryHelper("lapis_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val AMETHYST_DUST: ItemRegistryHelper = ItemRegistryHelper("amethyst_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val DIAMOND_DUST: ItemRegistryHelper = ItemRegistryHelper("diamond_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val EMERALD_DUST: ItemRegistryHelper = ItemRegistryHelper("emerald_dust", FabricItemSettings().group(ItemGroup.MATERIALS)).RegisterItem()
-    val ARCANE_DUST: ItemRegistryHelper = ItemRegistryHelper("arcane_dust", FabricItemSettings().rarity(Rarity.UNCOMMON).group(ItemGroup.MATERIALS)).RegisterItem()
+    val HELPER = ItemRegistryHelper()
+    val CHARCOAL_DUST = HELPER.registerItem("charcoal_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val COAL_DUST = HELPER.registerItem("coal_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val IRON_DUST = HELPER.registerItem("iron_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val COPPER_DUST = HELPER.registerItem("copper_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val GOLD_DUST = HELPER.registerItem("gold_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val LAPIS_DUST = HELPER.registerItem("lapis_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val AMETHYST_DUST = HELPER.registerItem("amethyst_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val DIAMOND_DUST = HELPER.registerItem("diamond_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val EMERALD_DUST = HELPER.registerItem("emerald_dust", FabricItemSettings().group(ItemGroup.MATERIALS))
+    val ARCANE_DUST = HELPER.registerItem("arcane_dust", ArcaneDust(FabricItemSettings().rarity(Rarity.UNCOMMON).group(ItemGroup.MATERIALS)))
 }

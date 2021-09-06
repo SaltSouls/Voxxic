@@ -12,6 +12,6 @@ object Voxxic: ModInitializer {
         VOXItems()
         VOXBlocks()
 
-        println("Voxxic has been initialized.");
+        println("Voxxic has been initialized.")
     }
 }
