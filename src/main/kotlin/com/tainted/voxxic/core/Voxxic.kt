@@ -5,7 +5,7 @@ import net.fabricmc.api.ModInitializer
 
 @Suppress("UNUSED")
 object Voxxic: ModInitializer {
-    private const val MOD_ID = "voxxic"
+    const val MOD_ID = "voxxic"
     override fun onInitialize() {
 
         // Initialize Mod Components:

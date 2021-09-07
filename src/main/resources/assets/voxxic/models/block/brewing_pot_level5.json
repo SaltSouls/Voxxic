@@ -7,7 +7,7 @@
 		"top": "voxxic:block/brewing_pot_top",
 		"side": "voxxic:block/brewing_pot_side",
 		"bottom": "voxxic:block/brewing_pot_bottom",
-		"liquid": "block/water_still"
+		"liquid": "minecraft:block/water_still"
 	},
 	"groups": [
 		{
@@ -104,7 +104,7 @@
 			"from": [3.99, 5.99, 3.99],
 			"to": [12.01, 6.01, 12.01],
 			"faces": {
-				"up": {"uv": [4, 4, 12, 12], "texture": "#liquid"}
+				"up": {"uv": [4, 4, 12, 12], "texture": "#liquid", "tintindex": 0}
 			}
 		}
 	]

@@ -1,6 +1,6 @@
 package com.tainted.voxxic.core.registry
 
-import com.tainted.voxxic.common.items.ArcaneDust
+import com.tainted.voxxic.common.item.ArcaneDust
 import com.tainted.voxxic.core.registry.registryHelpers.ItemRegistryHelper
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.ItemGroup
