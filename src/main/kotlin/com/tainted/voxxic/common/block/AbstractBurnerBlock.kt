@@ -4,12 +4,12 @@ import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.item.ItemPlacementContext
 import net.minecraft.state.StateManager
-import net.minecraft.state.property.Properties.HORIZONTAL_FACING
-import net.minecraft.state.property.Properties.LIT
-import net.minecraft.util.math.Direction.*
+import net.minecraft.state.property.Properties
+import net.minecraft.util.math.Direction
 
 abstract class AbstractBurnerBlock(settings: Settings): Block(settings) {
-    init {defaultState = defaultState.with(FACING, NORTH).with(LIT, false)}
+
+    init {defaultState = defaultState.with(FACING, Direction.NORTH).with(LIT, false)}
 
     override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) {
         super.appendProperties(builder)
@@ -20,6 +20,8 @@ abstract class AbstractBurnerBlock(settings: Settings): Block(settings) {
     }
 
     companion object {
-        val FACING = HORIZONTAL_FACING
+        val FACING = Properties.HORIZONTAL_FACING
+        val LIT = Properties.LIT
     }
+
 }

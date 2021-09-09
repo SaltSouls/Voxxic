@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
 class ItemRegistryHelper() {
+
     private val modId = MOD_ID
     fun registerItem(id: String, item: Item): Item {
         Registry.register(Registry.ITEM, Identifier(modId, id), item)
@@ -17,4 +18,5 @@ class ItemRegistryHelper() {
         Registry.register(Registry.ITEM, Identifier(modId, id), item)
         return item
     }
+
 }

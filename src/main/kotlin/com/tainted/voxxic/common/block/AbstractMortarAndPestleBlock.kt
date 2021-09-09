@@ -13,4 +13,5 @@ abstract class AbstractMortarAndPestleBlock(settings: Settings): Block(settings)
     override fun getOutlineShape(state: BlockState, view: BlockView, pos: BlockPos, context: ShapeContext): VoxelShape {
         return SHAPE
     }
+
 }
