@@ -13,7 +13,6 @@ import net.minecraft.util.shape.VoxelShape
 import net.minecraft.world.BlockView
 import net.minecraft.world.World
 
-//TODO Fix Block Level Properties
 //TODO Move Level Properties to BrewingPotBlock
 abstract class AbstractBrewingPotBlock(settings: Settings): Block(settings) {
 
