@@ -22,6 +22,7 @@ class VOXBlocks {
         var BREWING_POT: Block? = null
         var MORTAR_AND_PESTLE: Block? = null
         var BURNER: Block? = null
+        var SCORITE: Block? = null
     }
 
     private fun createLightLevelFromBlockState(lightLevel: Int): ToIntFunction<BlockState> {
