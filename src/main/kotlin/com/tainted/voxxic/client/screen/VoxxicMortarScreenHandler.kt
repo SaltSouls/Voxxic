@@ -10,17 +10,17 @@ import net.minecraft.screen.slot.Slot
 
 class VoxxicMortarScreenHandler(syncId: Int, inventory: PlayerInventory) : ScreenHandler(Voxxic.MORTAR_SCREEN_TYPE, syncId) {
 
-    val mortarSeqment: Inventory = SimpleInventory(12);
+    val mortarSegment: Inventory = SimpleInventory(4);
 
     override fun canUse(player: PlayerEntity): Boolean {
-        return mortarSeqment.canPlayerUse(player);
+        return mortarSegment.canPlayerUse(player);
     }
 
     init {
         var m: Int;
         var l: Int;
         // Recipe Output
-        addSlot(object : Slot(mortarSeqment, 10, 132, 38) {
+        addSlot(object : Slot(mortarSegment, 10, 132, 38) {
             override fun canInsert(stack: ItemStack?): Boolean {
                 return false
             }
@@ -29,7 +29,7 @@ class VoxxicMortarScreenHandler(syncId: Int, inventory: PlayerInventory) : Scree
         // Recipe Inputs
         m = 0
         while (m < 3) {
-            addSlot(Slot(mortarSeqment,  m * 5, 25 + m * 20, 38))
+            addSlot(Slot(mortarSegment,  m * 5, 25 + m * 20, 38))
             m++
         }
 
