@@ -10,16 +10,15 @@ import net.minecraft.util.registry.Registry
 
 class BlockRegistryHelper() {
 
-    private val modId = MOD_ID
     fun registerBlock(id: String, block: Block, itemSettings: FabricItemSettings? = null): Block {
-        Registry.register(Registry.BLOCK, Identifier(modId, id), block)
-        when {itemSettings != null -> Registry.register(Registry.ITEM, Identifier(modId, id), BlockItem(block, itemSettings))}
+        Registry.register(Registry.BLOCK, Identifier(MOD_ID, id), block)
+        when {itemSettings != null -> Registry.register(Registry.ITEM, Identifier(MOD_ID, id), BlockItem(block, itemSettings))}
         return block;
     }
     fun registerBlock(id: String, blockSettings: FabricBlockSettings, itemSettings: FabricItemSettings? = null): Block {
         val block = Block(blockSettings)
-        Registry.register(Registry.BLOCK, Identifier(modId, id), block)
-        when {itemSettings != null -> Registry.register(Registry.ITEM, Identifier(modId, id), BlockItem(block, itemSettings))}
+        Registry.register(Registry.BLOCK, Identifier(MOD_ID, id), block)
+        when {itemSettings != null -> Registry.register(Registry.ITEM, Identifier(MOD_ID, id), BlockItem(block, itemSettings))}
         return block;
     }
 

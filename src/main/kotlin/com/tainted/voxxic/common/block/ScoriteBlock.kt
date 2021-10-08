@@ -8,7 +8,7 @@ import net.minecraft.entity.damage.DamageSource
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
-class ScoriteBlock(settings: Settings): AbstractBurnerBlock(settings) {
+class ScoriteBlock(settings: Settings): AbstractScoriteBlock(settings) {
 
     override fun onSteppedOn(world: World, pos: BlockPos, state: BlockState, entity: Entity) {
         if (isSoaked(state) && !entity.isFireImmune && (entity is LivingEntity) && !EnchantmentHelper.hasFrostWalker(entity)) {
@@ -16,8 +16,7 @@ class ScoriteBlock(settings: Settings): AbstractBurnerBlock(settings) {
         }
         super.onSteppedOn(world, pos, state, entity)
     }
-    fun isSoaked(state: BlockState): Boolean {
-        return state.get(AbstractScoriteBlock.SOAKED) as Boolean
+    private fun isSoaked(state: BlockState): Boolean {
+        return state.get(SOAKED) as Boolean
     }
-
 }

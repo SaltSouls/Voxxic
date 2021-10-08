@@ -7,7 +7,7 @@ import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
 import net.minecraft.util.Rarity
 
-//TODO Add Items
+//TODO Add More Items
 class VOXItems {
 
     companion object {
