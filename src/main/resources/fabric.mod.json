@@ -22,6 +22,12 @@
         "adapter": "kotlin",
         "value": "com.tainted.voxxic.core.Voxxic"
       }
+    ],
+    "client":  [
+      {
+        "adapter": "kotlin",
+        "value": "com.tainted.voxxic.client.VoxxicClient"
+      }
     ]
   },
   "mixins": [
