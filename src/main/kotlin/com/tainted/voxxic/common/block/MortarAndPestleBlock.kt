@@ -18,10 +18,8 @@ class MortarAndPestleBlock(settings: Settings): AbstractMortarAndPestleBlock(set
     val TITLE: Text = Text.of("Mortar");
     override fun onUse(state: BlockState, world: World, pos: BlockPos, player: PlayerEntity, hand: Hand, hit: BlockHitResult): ActionResult {
         if (!world.isClient) {
-            println("Creating screen factory");
             var screenHandlerFactory: NamedScreenHandlerFactory? = state.createScreenHandlerFactory(world, pos);
             if (screenHandlerFactory != null) {
-                println("Screenfactory made");
                 player.openHandledScreen(screenHandlerFactory);
             }
         }
