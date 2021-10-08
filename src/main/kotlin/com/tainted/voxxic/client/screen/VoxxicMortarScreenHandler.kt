@@ -20,7 +20,7 @@ class VoxxicMortarScreenHandler(syncId: Int, inventory: PlayerInventory) : Scree
         var m: Int;
         var l: Int;
         // Recipe Output
-        addSlot(object : Slot(mortarSegment, 10, 132, 38) {
+        addSlot(object : Slot(mortarSegment, 3, 132, 38) {
             override fun canInsert(stack: ItemStack?): Boolean {
                 return false
             }
@@ -29,7 +29,7 @@ class VoxxicMortarScreenHandler(syncId: Int, inventory: PlayerInventory) : Scree
         // Recipe Inputs
         m = 0
         while (m < 3) {
-            addSlot(Slot(mortarSegment,  m * 5, 25 + m * 20, 38))
+            addSlot(Slot(mortarSegment,  m, 25 + m * 20, 38))
             m++
         }
 
