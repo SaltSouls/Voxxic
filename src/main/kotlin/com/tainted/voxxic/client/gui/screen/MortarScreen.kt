@@ -1,4 +1,4 @@
-package com.tainted.voxxic.client.color.gui.screen
+package com.tainted.voxxic.client.gui.screen
 
 import com.tainted.voxxic.common.screen.MortarScreenHandler
 import com.mojang.blaze3d.systems.RenderSystem
