@@ -1,4 +1,6 @@
-import com.tainted.voxxic.core.Voxxic
+package com.tainted.voxxic.common.screen
+
+import com.tainted.voxxic.core.registry.VOXHandlers
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.inventory.Inventory
@@ -8,7 +10,7 @@ import net.minecraft.screen.ScreenHandler
 import net.minecraft.screen.slot.Slot
 
 
-class VoxxicMortarScreenHandler(syncId: Int, inventory: PlayerInventory) : ScreenHandler(Voxxic.MORTAR_SCREEN_TYPE, syncId) {
+class MortarScreenHandler(syncId: Int, inventory: PlayerInventory) : ScreenHandler(VOXHandlers.MORTAR_SCREEN_TYPE, syncId) {
 
     val mortarSegment: Inventory = SimpleInventory(4);
 

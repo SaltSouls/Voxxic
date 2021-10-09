@@ -26,7 +26,7 @@
     "client":  [
       {
         "adapter": "kotlin",
-        "value": "com.tainted.voxxic.client.VoxxicClient"
+        "value": "com.tainted.voxxic.client.VOXClient"
       }
     ]
   },

@@ -1,6 +1,6 @@
 package com.tainted.voxxic.common.block
 
-import VoxxicMortarScreenHandler
+import com.tainted.voxxic.common.screen.MortarScreenHandler
 import net.minecraft.block.BlockState
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.entity.player.PlayerInventory
@@ -28,7 +28,7 @@ class MortarAndPestleBlock(settings: Settings): AbstractMortarAndPestleBlock(set
 
     override fun createScreenHandlerFactory(state: BlockState, world: World, pos: BlockPos): NamedScreenHandlerFactory {
         return SimpleNamedScreenHandlerFactory({ syncId: Int, inventory: PlayerInventory, player: PlayerEntity ->
-            VoxxicMortarScreenHandler(
+            MortarScreenHandler(
                 syncId,
                 inventory,
             )
