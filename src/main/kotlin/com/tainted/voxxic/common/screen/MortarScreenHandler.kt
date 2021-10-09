@@ -23,7 +23,7 @@ class MortarScreenHandler(syncId: Int, inventory: PlayerInventory) : ScreenHandl
         var l: Int;
         // Recipe Output
         addSlot(object : Slot(mortarSegment, 3, 132, 38) {
-            override fun canInsert(stack: ItemStack?): Boolean {
+            override fun canInsert(stack: ItemStack): Boolean {
                 return false
             }
         })
@@ -51,5 +51,48 @@ class MortarScreenHandler(syncId: Int, inventory: PlayerInventory) : ScreenHandl
             addSlot(Slot(inventory, m, 8 + m * 18, 141))
             ++m
         }
+    }
+
+    
+    override fun transferSlot(player: PlayerEntity, index: Int): ItemStack {
+        var itemStack: ItemStack = ItemStack.EMPTY;
+        var slot: Slot? = slots[index];
+        if (slot != null && slot.hasStack()) {
+            var itemStack2: ItemStack = slot.stack;
+            itemStack = itemStack2.copy();
+            if(index == 0) {
+                if(!insertItem(itemStack2, 4, 40, true)) {
+                    return ItemStack.EMPTY;
+                }
+            } else if (index in 4..40) {
+                if(!insertItem(itemStack2, 1, 4, false)) {
+                    if (index < 32) {
+                        if(!insertItem(itemStack2, 32, 40, false)) {
+                            return ItemStack.EMPTY;
+                        }
+                    } else if(!insertItem(itemStack2, 4, 32, false)) {
+                        return ItemStack.EMPTY;
+                    }
+                }
+            } else if(!insertItem(itemStack2, 4, 40, false)) {
+                return ItemStack.EMPTY;
+            }
+
+            if (itemStack2.isEmpty) {
+                slot.stack = ItemStack.EMPTY;
+            } else {
+                slot.markDirty();
+            }
+
+            if (itemStack2.count == itemStack.count) {
+                return ItemStack.EMPTY;
+            }
+
+            slot.onTakeItem(player, itemStack2);
+            if(index == 0) {
+                player.dropItem(itemStack2, false);
+            }
+        }
+        return itemStack;
     }
 }
