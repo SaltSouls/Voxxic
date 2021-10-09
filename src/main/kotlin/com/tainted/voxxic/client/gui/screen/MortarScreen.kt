@@ -1,8 +1,10 @@
-package com.tainted.voxxic.client.screen
+package com.tainted.voxxic.client.gui.screen
 
-import VoxxicMortarScreenHandler
+import com.tainted.voxxic.common.screen.VoxxicMortarScreenHandler;
 import com.mojang.blaze3d.systems.RenderSystem
 import com.tainted.voxxic.core.Voxxic
+import net.fabricmc.api.EnvType
+import net.fabricmc.api.Environment
 import net.minecraft.client.gui.screen.ingame.HandledScreen
 import net.minecraft.client.util.math.MatrixStack
 import net.minecraft.entity.player.PlayerInventory
@@ -10,6 +12,7 @@ import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 
 
+@Environment(EnvType.CLIENT)
 class MortarScreen(handler: VoxxicMortarScreenHandler, inventory: PlayerInventory, title: Text) : HandledScreen<VoxxicMortarScreenHandler>(handler, inventory, title) {
     private val TEXTURE: Identifier = Identifier(Voxxic.MOD_ID, "textures/gui/container/mortar_and_pestle.png");
     private var backgroundWidth = 176;

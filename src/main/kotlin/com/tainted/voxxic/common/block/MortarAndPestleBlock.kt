@@ -1,6 +1,6 @@
 package com.tainted.voxxic.common.block
 
-import VoxxicMortarScreenHandler
+import com.tainted.voxxic.common.screen.VoxxicMortarScreenHandler
 import net.minecraft.block.BlockState
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.entity.player.PlayerInventory

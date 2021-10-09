@@ -1,5 +1,5 @@
 package com.tainted.voxxic.core
-import VoxxicMortarScreenHandler
+import com.tainted.voxxic.common.screen.VoxxicMortarScreenHandler;
 import com.tainted.voxxic.client.color.VOXBlockColors
 import com.tainted.voxxic.client.render.VOXRenderLayer
 import com.tainted.voxxic.core.registry.VOXBlocks

@@ -1,3 +1,5 @@
+package com.tainted.voxxic.common.screen
+
 import com.tainted.voxxic.core.Voxxic
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.entity.player.PlayerInventory
@@ -6,7 +8,6 @@ import net.minecraft.inventory.SimpleInventory
 import net.minecraft.item.ItemStack
 import net.minecraft.screen.ScreenHandler
 import net.minecraft.screen.slot.Slot
-
 
 class VoxxicMortarScreenHandler(syncId: Int, inventory: PlayerInventory) : ScreenHandler(Voxxic.MORTAR_SCREEN_TYPE, syncId) {
 
